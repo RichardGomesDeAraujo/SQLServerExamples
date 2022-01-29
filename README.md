@@ -229,5 +229,24 @@ Basic SQL queries for studies
     WHERE ranking <= 3
   ```
   
+<p>  <br>
+  </p>
+ 
+  >## Creating A Procedure To Search Data
+  ```SQL
+      CREATE PROCEDURE Buscar
+      @nomefuncionario VARCHAR(30)
+      AS
+      SET @nomefuncionario = '%'+@nomefuncionario+'%'
+      SELECT
+      id_funcionario,
+      nome,
+      dpto,
+      salario_base
+      FROM vw_bd
+      WHERE nome LIKE @nomefuncionario
+
+      EXEC Buscar'MARIO PEDRO'
+  ```
   
 
