@@ -7,6 +7,9 @@
 - [**Creating Tables**](README.md#Tables)
 - [**Insert Into**](README.md#Tables)
 - [**Create View**](README.md#View)
+- [**Sub Query**](README.md#SubQuery)
+- [**Update**](README.md#Update)
+- [**DateDiff**](README.md#DateDiff)
 
 <p>  <br>
   </p>
@@ -119,8 +122,8 @@ Basic SQL queries for studies
   </p>
  
 >## View
->## Creating a View To Organize The Data With The Useful Columns
->## Stablishing Relation Between The Table With JOIN Clause
+>### Creating a View To Organize The Data With The Useful Columns
+>### Stablishing Relation Between The Table With JOIN Clause
 
 ```SQL
     CREATE VIEW vw_bd
@@ -148,8 +151,9 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Creating A Second View With A Calculated Columns
->## View With A Sub-query
+>## SubQuery
+>### Creating A Second View With A Calculated Columns
+>### View With A Sub-query
 ```SQL
     SELECT 
     dpto,
@@ -171,7 +175,8 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Updating The Data Inserted With An Error
+>## Update
+>### Updating The Data Inserted With An Error
 ```SQL
     UPDATE funcionarios
     SET dpto = 'ADMINISTRATIVO'
@@ -181,7 +186,8 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Creating A Query To Calculate The Service Time From Employees
+>## DateDiff
+>### Creating A Query To Calculate The Service Time From Employees
 ```SQL
     SELECT 
     id_funcionario,
