@@ -3,8 +3,8 @@
   </p>
   
 # Índice
-- [**Creating a Database**](README.md#1)
-- [**Creating Tables**](README.md#2)
+- [**Creating a Database**](README.md#1-Database)
+- [**Creating Tables**](README.md#2-Tables)
 
 <p>  <br>
   </p>
@@ -15,7 +15,7 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
   
->## 1 - Creating a Database
+>## 1-Database
 ```SQL
     > CREATE DATABASE SQLServerChallenge02
 ```
@@ -23,7 +23,7 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## 2 - Creating Tables
+>## 2-Tables
 >### First Table
 ```SQL
     > CREATE TABLE funcionarios
