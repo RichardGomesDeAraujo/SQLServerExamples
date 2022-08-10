@@ -1,3 +1,5 @@
+[""CREATE_DATABASE""](README.md#Database)
+
 # SQLServerChallenge02
 Basic SQL queries for studies
 
