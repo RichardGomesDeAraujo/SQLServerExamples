@@ -3,8 +3,8 @@
   </p>
   
 # Índice
-- [**Creating_a_Database**](README.md#Creating_a_Database)
-- [**Creating_Tables**](README.md#Creating_Tables)
+- [**Creating a Database**](README.md#Creating_a_Database)
+- [**Creating Tables**](README.md#Creating_Tables)
 
 <p>  <br>
   </p>
@@ -24,7 +24,7 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Creating tables
+>## Creating Tables
 >### First Table
 ```SQL
     > CREATE TABLE funcionarios
