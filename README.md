@@ -5,6 +5,8 @@
 # Índice
 - [**Creating a Database**](README.md#Database)
 - [**Creating Tables**](README.md#Tables)
+- [**Insert Into**](README.md#Tables)
+- [**Create View**](README.md#View)
 
 <p>  <br>
   </p>
@@ -16,6 +18,8 @@ Basic SQL queries for studies
   </p>
   
 >## Database
+>### Creating a Database
+
 ```SQL
     > CREATE DATABASE SQLServerChallenge02
 ```
@@ -24,6 +28,8 @@ Basic SQL queries for studies
   </p>
  
 >## Tables
+>### Creating Tables
+
 >### First Table
 ```SQL
     > CREATE TABLE funcionarios
@@ -65,6 +71,7 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
     
+ >## Insert
  >### Inserting Data To My First Table
 ```SQL
     > INSERT INTO funcionarios
@@ -111,8 +118,10 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Stablishing Relation Between The Table With JOIN Clause
+>## View
 >## Creating a View To Organize The Data With The Useful Columns
+>## Stablishing Relation Between The Table With JOIN Clause
+
 ```SQL
     CREATE VIEW vw_bd
     AS
