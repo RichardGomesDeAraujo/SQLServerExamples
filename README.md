@@ -5,7 +5,6 @@
 # Índice
 - [**Creating a Database**](README.md#Database)
 - [**Creating Tables**](README.md#Tables)
-- [**Insert Into**](README.md#Tables)
 - [**Create View**](README.md#View)
 - [**Sub Query**](README.md#SubQuery)
 - [**Update**](README.md#Update)
