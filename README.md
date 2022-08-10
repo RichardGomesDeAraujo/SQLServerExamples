@@ -9,6 +9,10 @@
 - [**Sub Query**](README.md#SubQuery)
 - [**Update**](README.md#Update)
 - [**DateDiff**](README.md#DateDiff)
+- [**Max Min**](README.md#MaxMin)
+- [**Avg**](README.md#Average)
+- [**Ranking**](README.md#Ranking)
+- [**Procedure**](README.md#Procedure)
 
 <p>  <br>
   </p>
@@ -25,6 +29,7 @@ Basic SQL queries for studies
 ```SQL
     > CREATE DATABASE SQLServerChallenge02
 ```
+
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
@@ -199,7 +204,8 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Creating A Query To Return The Maximum And Minimum Value
+>## MaxMin 
+>### Creating A Query To Return The Maximum And Minimum Value
 ```SQL
     SELECT 
     MAX(salario_base) AS maior_salario,
@@ -227,7 +233,8 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Creating A Query To Return The Medium Value
+>## Average
+>### Creating A Query To Return The Medium Value
 ```SQL
     SELECT 
     AVG(salario_base) AS media_salarial
@@ -237,7 +244,8 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
->## Creating A View With Sub-Query To Show The Ranking
+>## Ranking
+>### Creating A View With Sub-Query To Show The Ranking
 ```SQL
     SELECT
     nome,
@@ -257,7 +265,8 @@ Basic SQL queries for studies
 <p>  <br>
   </p>
  
-  >## Creating A Procedure To Search Data
+>## Procedure
+>### Creating A Procedure To Search Data
   ```SQL
       CREATE PROCEDURE Buscar
       @nomefuncionario VARCHAR(30)
