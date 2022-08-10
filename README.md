@@ -25,7 +25,7 @@ Basic SQL queries for studies
 ```SQL
     > CREATE DATABASE SQLServerChallenge02
 ```
->##### - [**Voltar ao Índice**](README.md#Índice)
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -42,7 +42,7 @@ Basic SQL queries for studies
       cargo VARCHAR(30) NOT NULL,
       salario_base MONEY NOT NULL ) 
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -52,7 +52,7 @@ Basic SQL queries for studies
       ( id_cargo INT NOT NULL,
       cargo VARCHAR(30) NOT NULL )
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -69,7 +69,7 @@ Basic SQL queries for studies
       vt MONEY NOT NULL,
       sal_off MONEY NOT NULL )
 ```  
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
     
@@ -86,7 +86,7 @@ Basic SQL queries for studies
       ('GISLAINE TEIXEIRA','2012-12-01','ASSIST DE LOGISTICA',2409.20,'INDIRETO'),
       ('LUCAS MACIEL','2014-01-14','AUX.ADMINISTRATIVO',1403.70,'ADMINISTRATIVO')
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -100,7 +100,7 @@ Basic SQL queries for studies
       (2014,'GERENTE'),
       (2003,'ASSIST DE LOGISTICA')
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -116,7 +116,7 @@ Basic SQL queries for studies
       (6,2000,200,150,160,215,50,250,0),
       (7,1150,150,114,142,162,65,250,0)
 ```  
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -146,7 +146,7 @@ Basic SQL queries for studies
     JOIN funcionarios AS f ON f.id_funcionario = l.id_funcionario
     JOIN cargos AS c ON c.cargo = f.cargo
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -170,7 +170,7 @@ Basic SQL queries for studies
           GROUP BY dpto ) AS bd
     GROUP BY dpto, qtd, nominal
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -181,7 +181,7 @@ Basic SQL queries for studies
     SET dpto = 'ADMINISTRATIVO'
     WHERE dpto = 'ADMINSTRATIVO'
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -195,7 +195,7 @@ Basic SQL queries for studies
     DATEDIFF(YEAR,admissao,GETDATE()) AS tempo_servico
     FROM vw_bd
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -206,7 +206,7 @@ Basic SQL queries for studies
     MIN(salario_base) AS menor_salario
     FROM vw_bd
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -223,7 +223,7 @@ Basic SQL queries for studies
       MAX(salario_base) AS maior_salario
       FROM vw_bd AS bd)
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -233,7 +233,7 @@ Basic SQL queries for studies
     AVG(salario_base) AS media_salarial
     FROM vw_bd
 ```
-
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -253,7 +253,7 @@ Basic SQL queries for studies
       FROM vw_bd) AS bd
     WHERE ranking <= 3
   ```
-  
+>###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -273,5 +273,5 @@ Basic SQL queries for studies
 
       EXEC Buscar'MARIO PEDRO'
   ```
-  
+  >###### - [**Voltar ao Índice**](README.md#Índice)
 
