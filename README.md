@@ -13,7 +13,7 @@
 - [**Avg**](README.md#Average)
 - [**Ranking**](README.md#Ranking)
 - [**Procedure**](README.md#Procedure)
-- [**SaldoAcumulado**](README.md#SaldoAcumulado)
+- [**RowNumber**](README.md#RowNumber)
 
 <p>  <br>
   </p>
@@ -287,7 +287,7 @@ Basic SQL queries for studies
   <p>  <br>
   </p>
   
->## SaldoAcumulado
+>## RowNumber
 >### Creating A SQL to Return the Accumulated Balance
 
 ```SQL
