@@ -15,6 +15,7 @@
 - [**Procedure**](README.md#Procedure)
 - [**RowNumber**](README.md#RowNumber)
 - [**AccumulatedBalance**](README.md#RowNumber)
+- [**CaseWhenThenElseEnd**](README.md#RowNumber)
 
 <p>  <br>
   </p>
