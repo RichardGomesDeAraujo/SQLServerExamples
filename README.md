@@ -13,6 +13,7 @@
 - [**Avg**](README.md#Average)
 - [**Ranking**](README.md#Ranking)
 - [**Procedure**](README.md#Procedure)
+- [**SaldoAcumulado**](README.md#Procedure)
 
 <p>  <br>
   </p>
@@ -283,4 +284,29 @@ Basic SQL queries for studies
       EXEC Buscar'MARIO PEDRO'
   ```
   >###### - [**Voltar ao Índice**](README.md#Índice)
+  <p>  <br>
+  </p>
+  
+>## SaldoAcumulado
+>### Creating A SQL to Return the Accumulated Balance
+
+```SQL
+      SELECT
+      Periodo,
+      Debito,
+      Credito,
+      SaldoDia,
+      Qtd,
+      SUM(SaldoDia) OVER(PARTITION BY MONTH(Qtd) ORDER BY Qtd) as SaldoAcumulado
+      FROM (
+        SELECT
+        Periodo,
+        Debito,
+        Credito,
+        CASE WHEN Debito = 0 THEN Credito ELSE (Debito - Credito) END AS SaldoDia,
+        ROW_NUMBER() OVER(ORDER BY Periodo) AS Qtd
+        FROM SaldoAcumulado
+      ) AS Tbl
+```
+>###### - [**Voltar ao Índice**](README.md#Índice)
 
