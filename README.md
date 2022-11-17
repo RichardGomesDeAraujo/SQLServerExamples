@@ -14,6 +14,7 @@
 - [**Ranking**](README.md#Ranking)
 - [**Procedure**](README.md#Procedure)
 - [**RowNumber**](README.md#RowNumber)
+- [**AccumulatedBalance**](README.md#RowNumber)
 
 <p>  <br>
   </p>
