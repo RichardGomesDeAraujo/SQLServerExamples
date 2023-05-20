@@ -1,3 +1,4 @@
+<img src="Logo.png" alt="Hands On Data" style="height: 100px; width:115px;"/>
 <p>  <br>
   </p>
 
