@@ -7,6 +7,7 @@
 - [**Creating Tables**](README.md#Tables)
 - [**Create View**](README.md#View)
 - [**Sub Query**](README.md#SubQuery)
+- [**CTE-Commom Table Expression**](README.md#CTE)
 - [**Update**](README.md#Update)
 - [**DateDiff**](README.md#DateDiff)
 - [**Max Min**](README.md#MaxMin)
@@ -43,12 +44,14 @@ Basic SQL queries for studies
 >### First Table
 ```SQL
     > CREATE TABLE funcionarios
-      ( id_funcionario INT IDENTITY NOT NULL,
+      ( 
+      id_funcionario INT IDENTITY NOT NULL,
       nome VARCHAR(30) NOT NULL,
       admissao DATE NOT NULL,
       dpto VARCHAR(30) NOT NULL,
       cargo VARCHAR(30) NOT NULL,
-      salario_base MONEY NOT NULL ) 
+      salario_base MONEY NOT NULL 
+      ) 
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -57,8 +60,10 @@ Basic SQL queries for studies
 >### Second Table
 ```SQL
     > CREATE TABLE cargos
-      ( id_cargo INT NOT NULL,
-      cargo VARCHAR(30) NOT NULL )
+      ( 
+      id_cargo INT NOT NULL,
+      cargo VARCHAR(30) NOT NULL 
+      )
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -67,7 +72,8 @@ Basic SQL queries for studies
 >### Third Table
 ```SQL
     > CREATE TABLE lancamentos
-      ( id_funcionario INT NOT NULL,
+      ( 
+      id_funcionario INT NOT NULL,
       salario_mes MONEY NOT NULL,
       decimo MONEY NOT NULL,
       ferias MONEY NOT NULL,
@@ -75,7 +81,8 @@ Basic SQL queries for studies
       inss MONEY NOT NULL,
       he MONEY NOT NULL,
       vt MONEY NOT NULL,
-      sal_off MONEY NOT NULL )
+      sal_off MONEY NOT NULL 
+      )
 ```  
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -136,23 +143,26 @@ Basic SQL queries for studies
     CREATE VIEW vw_bd
     AS
     SELECT 
-    l.id_funcionario,
-    l.decimo,
-    l.ferias,
-    l.FGTS,
-    l.HE,
-    l.sal_off,
-    l.salario_mes,
-    l.INSS,
-    l.VT,
-    f.nome,
-    f.salario_base,
-    f.admissao,
-    f.cargo,
-    f.dpto
-    FROM lancamentos_folha AS l
-    JOIN funcionarios AS f ON f.id_funcionario = l.id_funcionario
-    JOIN cargos AS c ON c.cargo = f.cargo
+      l.id_funcionario,
+      l.decimo,
+      l.ferias,
+      l.FGTS,
+      l.HE,
+      l.sal_off,
+      l.salario_mes,
+      l.INSS,
+      l.VT,
+      f.nome,
+      f.salario_base,
+      f.admissao,
+      f.cargo,
+      f.dpto
+    FROM 
+      lancamentos_folha AS l
+    JOIN funcionarios AS f 
+      ON f.id_funcionario = l.id_funcionario
+    JOIN cargos AS c 
+      ON c.cargo = f.cargo
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -163,25 +173,63 @@ Basic SQL queries for studies
 >### View With A Sub-query
 ```SQL
     SELECT 
-    dpto,
-    qtd,
-    nominal,
-    SUM(nominal+impostos+beneficios) AS efetivo
+      dpto,
+      qtd,
+      nominal,
+      SUM(nominal+impostos+beneficios) AS efetivo
     FROM
         ( SELECT
-          dpto,
-          COUNT(nome) AS qtd,
-          SUM(salario_base) AS nominal,
-          SUM(decimo+ferias+FGTS+INSS) AS impostos,
-          SUM(VT+sal_off+HE) AS beneficios
-          FROM vw_bd
-          GROUP BY dpto ) AS bd
-    GROUP BY dpto, qtd, nominal
+            dpto,
+            COUNT(nome) AS qtd,
+            SUM(salario_base) AS nominal,
+            SUM(decimo+ferias+FGTS+INSS) AS impostos,
+            SUM(VT+sal_off+HE) AS beneficios
+          FROM 
+            vw_bd
+          GROUP BY 
+            dpto ) AS bd
+    GROUP BY 
+      dpto, 
+      qtd, 
+      nominal
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
   </p>
- 
+  
+>## CTE
+>### (Commom Table Expression) 
+>### CTE is an alternative way of coding instead of with subqueries
+```SQL
+WITH tbl AS
+(
+  SELECT
+    dpto,
+    COUNT(nome) AS qtd,
+    SUM(salario_base) AS nominal,
+    SUM(decimo+ferias+FGTS+INSS) AS impostos,
+    SUM(VT+sal_off+HE) AS beneficios
+  FROM 
+    vw_bd
+  GROUP BY 
+    dpto
+)
+SELECT 
+  dpto,
+  qtd,
+  nominal,
+  SUM(nominal+impostos+beneficios) AS efetivo
+FROM 
+  tbl
+GROUP BY 
+  dpto, 
+  qtd, 
+  nominal
+```
+>###### - [**Voltar ao Índice**](README.md#Índice)
+<p>  <br>
+  </p>
+  
 >## Update
 >### Updating The Data Inserted With An Error
 ```SQL
@@ -197,11 +245,12 @@ Basic SQL queries for studies
 >### Creating A Query To Calculate The Service Time From Employees
 ```SQL
     SELECT 
-    id_funcionario,
-    nome,
-    admissao,
-    DATEDIFF(YEAR,admissao,GETDATE()) AS tempo_servico
-    FROM vw_bd
+      id_funcionario,
+      nome,
+      admissao,
+      DATEDIFF(YEAR,admissao,GETDATE()) AS tempo_servico
+    FROM 
+      vw_bd
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -211,9 +260,10 @@ Basic SQL queries for studies
 >### Creating A Query To Return The Maximum And Minimum Value
 ```SQL
     SELECT 
-    MAX(salario_base) AS maior_salario,
-    MIN(salario_base) AS menor_salario
-    FROM vw_bd
+      MAX(salario_base) AS maior_salario,
+      MIN(salario_base) AS menor_salario
+    FROM 
+      vw_bd
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -222,15 +272,20 @@ Basic SQL queries for studies
 >## Creating A Query With A Sub-Query To Visualize Data About The Maximum And Minimum Value
 ```SQL
     SELECT
-    nome,
-    cargo,
-    admissao,
-    salario_base
-    FROM vw_bd
-    WHERE salario_base = 
-      (SELECT 
-      MAX(salario_base) AS maior_salario
-      FROM vw_bd AS bd)
+      nome,
+      cargo,
+      admissao,
+      salario_base
+    FROM 
+      vw_bd
+    WHERE 
+      salario_base = 
+      (
+      SELECT 
+        MAX(salario_base) AS maior_salario
+      FROM 
+        vw_bd AS bd
+      )
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -240,8 +295,9 @@ Basic SQL queries for studies
 >### Creating A Query To Return The Medium Value
 ```SQL
     SELECT 
-    AVG(salario_base) AS media_salarial
-    FROM vw_bd
+      AVG(salario_base) AS media_salarial
+    FROM 
+      vw_bd
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -251,18 +307,22 @@ Basic SQL queries for studies
 >### Creating A View With Sub-Query To Show The Ranking
 ```SQL
     SELECT
-    nome,
-    cargo,
-    salario_base,
-    ranking
-    FROM
-      (SELECT 
       nome,
       cargo,
       salario_base,
-      RANK() OVER(ORDER BY salario_base DESC) AS ranking
-      FROM vw_bd) AS bd
-    WHERE ranking <= 3
+      ranking
+    FROM
+      (
+      SELECT 
+        nome,
+        cargo,
+        salario_base,
+        RANK() OVER(ORDER BY salario_base DESC) AS ranking
+      FROM 
+        vw_bd
+      ) AS bd
+    WHERE 
+      ranking <= 3
   ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 <p>  <br>
@@ -276,12 +336,14 @@ Basic SQL queries for studies
       AS
       SET @nomefuncionario = '%'+@nomefuncionario+'%'
       SELECT
-      id_funcionario,
-      nome,
-      dpto,
-      salario_base
-      FROM vw_bd
-      WHERE nome LIKE @nomefuncionario
+        id_funcionario,
+        nome,
+        dpto,
+        salario_base
+      FROM 
+        vw_bd
+      WHERE 
+        nome LIKE @nomefuncionario
 
       EXEC Buscar'MARIO PEDRO'
   ```
@@ -294,21 +356,23 @@ Basic SQL queries for studies
 
 ```SQL
       SELECT
-      Periodo,
-      Debito,
-      Credito,
-      SaldoDia,
-      Qtd,
-      SUM(SaldoDia) OVER(PARTITION BY MONTH(Qtd) ORDER BY Qtd) as SaldoAcumulado
-      FROM (
-        SELECT
         Periodo,
         Debito,
         Credito,
-        CASE WHEN Debito = 0 THEN Credito ELSE (Debito - Credito) END AS SaldoDia,
-        ROW_NUMBER() OVER(ORDER BY Periodo) AS Qtd
-        FROM SaldoAcumulado
-      ) AS Tbl
+        SaldoDia,
+        Qtd,
+        SUM(SaldoDia) OVER(PARTITION BY MONTH(Qtd) ORDER BY Qtd) as SaldoAcumulado
+      FROM 
+        (
+        SELECT
+          Periodo,
+          Debito,
+          Credito,
+          CASE WHEN Debito = 0 THEN Credito ELSE (Debito - Credito) END AS SaldoDia,
+          ROW_NUMBER() OVER(ORDER BY Periodo) AS Qtd
+        FROM 
+          SaldoAcumulado
+        ) AS Tbl
 ```
 >###### - [**Voltar ao Índice**](README.md#Índice)
 
