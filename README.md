@@ -1,8 +1,6 @@
 <p>  <br>
   </p>
-<p>  <br>
-  </p>  
-  
+
 
 ###### by [Richard Gomes de Araújo](https://github.com/RichardGomesDeAraujo) - 20/05/2023
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/RichardGomesDeAraujo)](https://github.com/RichardGomesDeAraujo)
