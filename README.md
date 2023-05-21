@@ -1,8 +1,12 @@
 <img src="Logo.png" alt="Hands On Data" style="height: 100px; width:115px;"/>
+
 <p>  <br>
   </p>
-
-<img src="CabeçalhoDePublicações.png" alt="Hands On Data" style="height: 100px; width:115px;"/>
+  
+# Basic and advanced SQL commands for queries and usage learning  
+<p>  <br>
+  </p>
+  
 ###### by [Richard Gomes de Araújo](https://github.com/RichardGomesDeAraujo) - 20/05/2023
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/RichardGomesDeAraujo)](https://github.com/RichardGomesDeAraujo)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/richardaraujoanalistadedados/)](https://www.linkedin.com/in/richardaraujoanalistadedados/)
