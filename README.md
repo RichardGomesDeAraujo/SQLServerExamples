@@ -46,7 +46,7 @@ Basic SQL queries for studies
     > CREATE DATABASE SQLServerChallenge02
 ```
 
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -65,7 +65,7 @@ Basic SQL queries for studies
       salario_base MONEY NOT NULL 
       ) 
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -77,7 +77,7 @@ Basic SQL queries for studies
       cargo VARCHAR(30) NOT NULL 
       )
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -96,7 +96,7 @@ Basic SQL queries for studies
       sal_off MONEY NOT NULL 
       )
 ```  
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
     
@@ -113,7 +113,7 @@ Basic SQL queries for studies
       ('GISLAINE TEIXEIRA','2012-12-01','ASSIST DE LOGISTICA',2409.20,'INDIRETO'),
       ('LUCAS MACIEL','2014-01-14','AUX.ADMINISTRATIVO',1403.70,'ADMINISTRATIVO')
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -127,7 +127,7 @@ Basic SQL queries for studies
       (2014,'GERENTE'),
       (2003,'ASSIST DE LOGISTICA')
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -143,7 +143,7 @@ Basic SQL queries for studies
       (6,2000,200,150,160,215,50,250,0),
       (7,1150,150,114,142,162,65,250,0)
 ```  
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -176,7 +176,7 @@ Basic SQL queries for studies
     JOIN cargos AS c 
       ON c.cargo = f.cargo
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -205,7 +205,7 @@ Basic SQL queries for studies
       qtd, 
       nominal
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
   
@@ -238,7 +238,7 @@ GROUP BY
   qtd, 
   nominal
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
   
@@ -249,7 +249,7 @@ GROUP BY
     SET dpto = 'ADMINISTRATIVO'
     WHERE dpto = 'ADMINSTRATIVO'
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -264,7 +264,7 @@ GROUP BY
     FROM 
       vw_bd
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -277,7 +277,7 @@ GROUP BY
     FROM 
       vw_bd
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -299,7 +299,7 @@ GROUP BY
         vw_bd AS bd
       )
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -311,7 +311,7 @@ GROUP BY
     FROM 
       vw_bd
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -336,7 +336,7 @@ GROUP BY
     WHERE 
       ranking <= 3
   ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 <p>  <br>
   </p>
  
@@ -359,7 +359,7 @@ GROUP BY
 
       EXEC Buscar'MARIO PEDRO'
   ```
-  >###### - [**Voltar ao Índice**](README.md#Índice)
+  ###### [⏪](README.md#Índice)
   <p>  <br>
   </p>
   
@@ -386,5 +386,5 @@ GROUP BY
           SaldoAcumulado
         ) AS Tbl
 ```
->###### - [**Voltar ao Índice**](README.md#Índice)
+###### [⏪](README.md#Índice)
 
