@@ -1,4 +1,4 @@
-<img src="Logo.png" alt="Hands On Data" style="height: 100px; width:115px;"/>
+<img src="Logo.png" align="Center" alt="Hands On Data" style="height: 100px; width:115px;"/>
 
 <p>  <br>
   </p>
@@ -6,7 +6,6 @@
 # Basic and advanced SQL commands for queries and usage learning  
 <p>  <br>
   </p>
-<img src="ImageRound.png" alt="Hands On Data" style="height: 100px; width:100px;"/> 
 
 ###### by [Richard Gomes de Araújo](https://github.com/RichardGomesDeAraujo) - 20/05/2023
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/RichardGomesDeAraujo)](https://github.com/RichardGomesDeAraujo)
