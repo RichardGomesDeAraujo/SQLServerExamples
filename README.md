@@ -32,6 +32,7 @@
 - [**NULLIF**](README.md#NULLIF)
 - [**ISNULL**](README.md#ISNULL)
 - [**Coalesce**](README.md#Coalesce)
+- [**iif**](README.md#iif)
 
 <p>  <br>
   </p>
@@ -402,7 +403,8 @@ GROUP BY
         dpto,
         salario_base,
         NULLIF(nome, "SAMARA APARECIDA") as Valor_Nulo
-      FROM 
+      FROM
+        funcionarios
   ```
   ###### [⏪](README.md#Índice)
   <p>  <br>
@@ -417,7 +419,8 @@ GROUP BY
         dpto,
         salario_base,
         ISNULL(dpto, "Departamento não Cadastrado") as Dpto_Nulo
-      FROM 
+      FROM
+        funcionarios
   ```
   ###### [⏪](README.md#Índice)
   <p>  <br>
@@ -433,7 +436,24 @@ GROUP BY
         salario_base,
         coalesce(tel1, tel2, tel3) as Telefone
         isnull(coalesce(tel1, tel2, tel3), "Não tem telefone") as Telefone_Se_Nulo
+      FROM
+        funcionarios
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
+   
+>## iif
+>### The use case of IIF is the same case use of CASE WHEN
+  ```SQL
+     SELECT
+          Periodo,
+          Debito,
+          Credito,
+          CASE WHEN Debito = 0 THEN Credito ELSE (Debito - Credito) END AS SaldoDia,
+          iif(Debito = 0, Credito, Debito - Credito) as SaldoDia_iif
       FROM 
+          SaldoAcumulado
   ```
   ###### [⏪](README.md#Índice)
   <p>  <br>
