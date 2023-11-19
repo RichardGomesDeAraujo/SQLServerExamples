@@ -30,6 +30,8 @@
 - [**AccumulatedBalance**](README.md#RowNumber)
 - [**CaseWhenThenElseEnd**](README.md#RowNumber)
 - [**NULLIF**](README.md#NULLIF)
+- [**ISNULL**](README.md#ISNULL)
+- [**Coalesce**](README.md#Coalesce)
 
 <p>  <br>
   </p>
@@ -405,4 +407,34 @@ GROUP BY
   ###### [⏪](README.md#Índice)
   <p>  <br>
   </p>
-
+ 
+>## ISNULL
+>### Change values if the value is NULL
+  ```SQL
+     SELECT
+        id_funcionario,
+        nome,
+        dpto,
+        salario_base,
+        ISNULL(dpto, "Departamento não Cadastrado") as Dpto_Nulo
+      FROM 
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
+   
+>## Coalesce
+>### Bring the first argument not null between some columns
+  ```SQL
+     SELECT
+        id_funcionario,
+        nome,
+        dpto,
+        salario_base,
+        coalesce(tel1, tel2, tel3) as Telefone
+        isnull(coalesce(tel1, tel2, tel3), "Não tem telefone") as Telefone_Se_Nulo
+      FROM 
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
