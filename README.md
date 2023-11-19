@@ -29,6 +29,7 @@
 - [**RowNumber**](README.md#RowNumber)
 - [**AccumulatedBalance**](README.md#RowNumber)
 - [**CaseWhenThenElseEnd**](README.md#RowNumber)
+- [**NULLIF**](README.md#NULLIF)
 
 <p>  <br>
   </p>
@@ -387,4 +388,21 @@ GROUP BY
         ) AS Tbl
 ```
 ###### [⏪](README.md#Índice)
+<p>  <br>
+  </p>
+ 
+>## NULLIF
+>### Change values into NULL if a select rule is true
+  ```SQL
+     SELECT
+        id_funcionario,
+        nome,
+        dpto,
+        salario_base,
+        NULLIF(nome, "SAMARA APARECIDA") as Valor_Nulo
+      FROM 
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
 
