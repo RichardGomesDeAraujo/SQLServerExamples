@@ -477,7 +477,7 @@ GROUP BY
   </p>
 
 >## lead
->### You use the lead command when you need the Next value from a column
+>### You use the lead command when you need the next value from a column
   ```SQL
      SELECT
           CdEvento,
