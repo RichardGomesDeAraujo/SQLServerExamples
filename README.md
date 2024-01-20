@@ -33,6 +33,8 @@
 - [**ISNULL**](README.md#ISNULL)
 - [**Coalesce**](README.md#Coalesce)
 - [**iif**](README.md#iif)
+- [**lag**](README.md#lag)
+- [**lead**](README.md#lead)
 
 <p>  <br>
   </p>
@@ -458,3 +460,32 @@ GROUP BY
   ###### [⏪](README.md#Índice)
   <p>  <br>
   </p>
+
+>## lag
+>### You use the lag command when you need the previous value from a column
+  ```SQL
+     SELECT
+          CdEvento,
+          DtAlteracao,
+          LAG(DtAlteracao) OVER(ORDER BY CdEvento) AS DtAlteracaoAnterior
+      FROM 
+          TbEvento
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
+
+>## lead
+>### You use the lag command when you need the Next value from a column
+  ```SQL
+     SELECT
+          CdEvento,
+          DtAlteracao,
+          LEAD(DtAlteracao) OVER(ORDER BY CdEvento) AS DtProximaAlteracao
+      FROM 
+          TbEvento
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
+  
