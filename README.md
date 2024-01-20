@@ -35,6 +35,7 @@
 - [**iif**](README.md#iif)
 - [**lag**](README.md#lag)
 - [**lead**](README.md#lead)
+- [**regexp**](README.md#regexp)
 
 <p>  <br>
   </p>
@@ -476,7 +477,7 @@ GROUP BY
   </p>
 
 >## lead
->### You use the lag command when you need the Next value from a column
+>### You use the lead command when you need the Next value from a column
   ```SQL
      SELECT
           CdEvento,
@@ -484,6 +485,24 @@ GROUP BY
           LEAD(DtAlteracao) OVER(ORDER BY CdEvento) AS DtProximaAlteracao
       FROM 
           TbEvento
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
+
+>## regexp
+>### You use the regexp command when you need an alternative to the like command
+  ```SQL
+     SELECT
+          CdEvento,
+          NmFinanciado
+      FROM 
+          TbEvento
+      WHERE
+          NmFinanciado REGEXP '^[RD]'  --Initiating with R or D
+        --NmFinanciado REGEXP '^[^RD]' --Not Initiating with R or D
+        --NmFinanciado REGEXP '[ng]$'  --where the last word is n or g
+        --NmFinanciado REGEXP '^[RD] | Mi' -- Initianting with R or D or Initianting with the syllable Mi
   ```
   ###### [⏪](README.md#Índice)
   <p>  <br>
