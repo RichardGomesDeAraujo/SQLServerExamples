@@ -501,8 +501,8 @@ GROUP BY
       WHERE
           NmFinanciado REGEXP '^[RD]'  --Initiating with R or D
         --NmFinanciado REGEXP '^[^RD]' --Not Initiating with R or D
-        --NmFinanciado REGEXP '[ng]$'  --where the last word is n or g
-        --NmFinanciado REGEXP '^[RD] | Mi' -- Initianting with R or D or Initianting with the syllable Mi
+        --NmFinanciado REGEXP '[ng]$'  --where the last letter is n or g
+        --NmFinanciado REGEXP '^[RD] | Mi' -- Initiating with R or D or Initiating with the syllable Mi
   ```
   ###### [⏪](README.md#Índice)
   <p>  <br>
