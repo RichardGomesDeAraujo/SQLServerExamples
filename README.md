@@ -36,6 +36,7 @@
 - [**lag**](README.md#lag)
 - [**lead**](README.md#lead)
 - [**regexp**](README.md#regexp)
+- [**Index**](README.md#Index)
 
 <p>  <br>
   </p>
@@ -508,3 +509,13 @@ GROUP BY
   <p>  <br>
   </p>
   
+>## Index
+>### How to create an index in SQL Sever Tables
+  ```SQL
+     CREATE INDEX Idx ON TbEvento (CdEvento)
+
+     DROP INDEX Idx ON TbEvento
+  ```
+  ###### [⏪](README.md#Índice)
+  <p>  <br>
+  </p>
